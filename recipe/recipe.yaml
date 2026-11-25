@@ -2,6 +2,7 @@ schema_version: 1
 
 context:
   version: "0.5.1"
+  python_min: "3.12"
   # Test suite run, shared by the openfold3 test blocks.
   # 1) Test entry points (beware fix rocm's when we get it working in CF)
   # 2) Fix an upstream problem in osx pytorch 2.14 conda package,
