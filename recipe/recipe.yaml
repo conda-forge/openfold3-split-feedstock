@@ -35,7 +35,7 @@ recipe:
   version: ${{ version }}
 
 source:
-  url: https://github.com/aqlaboratory/openfold-3/archive/refs/tags/v${{ version }}.tar.gz
+  url: https://github.com/aqlaboratory/openfold-3/archive/refs/tags/${{ version }}.tar.gz
   sha256: e9f969196d45b51946ea75f3426bc7a2beeaaa210fb4c1550dc7b7c0d3d71365
 
 build:
