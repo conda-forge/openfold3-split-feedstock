@@ -1,7 +1,8 @@
 schema_version: 1
 
 context:
-  version: "0.5.0"
+  version: "0.5.1"
+  python_min: "3.12"
   # Test suite run, shared by the openfold3 test blocks.
   # 1) Test entry points (beware fix rocm's when we get it working in CF)
   # 2) Fix an upstream problem in osx pytorch 2.14 conda package,
@@ -35,8 +36,8 @@ recipe:
   version: ${{ version }}
 
 source:
-  url: https://github.com/aqlaboratory/openfold-3/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 6a6f1d18fa96764b5f4613102da359a5b6df9868a16ccf33b10421548d9dc543
+  url: https://github.com/aqlaboratory/openfold-3/archive/refs/tags/${{ version }}.tar.gz
+  sha256: e9f969196d45b51946ea75f3426bc7a2beeaaa210fb4c1550dc7b7c0d3d71365
 
 build:
   number: 0
@@ -76,7 +77,7 @@ outputs:
         - ml-collections
         # --- Handling molecules
         - rdkit <2026  # pin might be removed soon, see https://github.com/aqlaboratory/openfold-3/issues/285
-        - biotite >=1.6,<2
+        - biotite >=1.6
         - pdbeccdutils
         - kalign-python
         # --- Misc
