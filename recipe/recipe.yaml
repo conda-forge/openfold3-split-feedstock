@@ -75,7 +75,7 @@ outputs:
         - pytorch-lightning <=2.6.1
         - ml-collections
         # --- Handling molecules
-        - rdkit <2026  # pin might be removed soon, see https://github.com/aqlaboratory/openfold-3/issues/285
+        - rdkit
         - biotite >=1.6
         - pdbeccdutils
         - kalign-python
